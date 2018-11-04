@@ -1,4 +1,4 @@
-//2017029589_·ùÁö¹ü_509
+//2017029589_RyuJibeom_509
 //Rodcutting
 #include <stdio.h>
 #include <stdlib.h>
