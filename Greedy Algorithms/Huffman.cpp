@@ -28,8 +28,6 @@ void swap(Node *a, Node *b) {
 }
 
 void heap_increase_key(int i, Node *newNode) {
-	//if (heap[i]->weight < newNode->weight) return;
-	
 	while (i > 1 && heap[i / 2]->weight > newNode->weight) {
 		heap[i] = heap[i / 2];
 		i /= 2;
@@ -66,10 +64,6 @@ void min_heapify(Node *arr[], int index) {
 	}
 
 	if (temp != index) {
-		/*Node *tempNode = arr[temp];
-		arr[temp] = arr[index];
-		arr[index] = tempNode;
-		*/
 		swap(arr[temp], arr[index]);
 		min_heapify(arr, temp);
 	}
@@ -77,10 +71,6 @@ void min_heapify(Node *arr[], int index) {
 
 Node *extract_min_heap() {
 	if (heap_size < 1) return NULL;
-	/*Node *min = heap[1];
-	heap[1] = heap[heap_size];
-	heap[heap_size] = min;
-	*/
 	swap(heap[1], heap[heap_size]);
 	heap_size--;
 	min_heapify(heap, 1);
